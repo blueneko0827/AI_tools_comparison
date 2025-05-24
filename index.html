@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="国内最大級のAIツール比較サイト。1,200件以上のAIツールを無料で比較できます。">
+    <title>AIサービス比較.com - 国内最大級のAIツール比較サイト</title>
+    <link rel="stylesheet" href="./assets/style/global.css">
+    <link rel="stylesheet" href="./assets/style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="home-page">
+        <!-- ナビゲーションバー -->
+        <header class="nav-bar">
+            <div class="logo-section">
+                <img class="logo" src="./assets/img/logo_top.png" alt="AIサービス比較.com" />
+            </div>
+            <div class="update-date">2025年5月7日最新版</div>
+            <nav class="navbar">
+                <a href="./index.html" class="nav-link active">ホーム</a>
+                <a href="./categories.html" class="nav-link">カテゴリー</a>
+                <a href="./ranking.html" class="nav-link">ランキング</a>
+                <a href="./new.html" class="nav-link">新着</a>
+                <a href="./reviews.html" class="nav-link">レビュー</a>
+                <a href="./contact.html" class="nav-link">お問い合わせ</a>
+            </nav>
+            <button class="submit-tool-btn">
+                <span>+ AIツールを掲載</span>
+            </button>
+            <div class="user-section">
+                <img class="user-icon" src="./assets/img/User_02.png" alt="ユーザーアイコン" />
+                <a href="./login.html" class="login-link">ログイン/登録</a>
+            </div>
+        </header>
+
+        <!-- ヒーローセクション -->
+        <section class="top-hero">
+            <h1 class="hero-title">国内No.1掲載数！1,200件超のAIツールを一括比較</h1>
+            <p class="hero-subtitle">完全無料・登録不要! 今すぐ使える最新AIツールが見つかる</p>
+            <div class="search-box">
+                <form class="search-form" action="./search.html" method="GET">
+                    <input type="text" name="q" placeholder="AIツールを検索..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <img src="./assets/img/Search_Magnifying_Glass.png" alt="検索" class="search-icon">
+                        <span>検索</span>
+                    </button>
+                </form>
+            </div>
+            <div class="category-tags">
+                <a href="./categories.html#image-generation" class="category-tag">画像生成AI</a>
+                <a href="./categories.html#chat" class="category-tag">#AIチャット</a>
+                <a href="./categories.html#voice" class="category-tag">#音声変換</a>
+                <a href="./categories.html#fortune" class="category-tag">#AI占い</a>
+            </div>
+        </section>
+
+        <!-- 人気カテゴリーセクション -->
+        <section class="popular-category">
+            <h2 class="section-title">人気カテゴリー</h2>
+            <div class="category-grid-items">
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" /></div>
+                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
+                        <span class="category-label">画像生成AI</span>
+                    </article>
+                    <!-- 他のカテゴリーカードも同様の構造で -->
+                </div>
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" /></div>
+                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
+                        <span class="category-label">画像生成AI</span>
+                    </article>
+                    <!-- 他のカテゴリーカードも同様の構造で -->
+                </div>
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" /></div>
+                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
+                        <span class="category-label">画像生成AI</span>
+                    </article>
+                    <!-- 他のカテゴリーカードも同様の構造で -->
+                </div>
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" /></div>
+                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
+                        <span class="category-label">画像生成AI</span>
+                    </article>
+                    <!-- 他のカテゴリーカードも同様の構造で -->
+                </div>
+            </div>
+            <a href="./categories.html" class="view-all-btn">
+                <span>すべてのカテゴリを見る</span>
+                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+            </a>
+        </section>
+
+        <!-- ランキングセクション -->
+        <section class="top-ranking">
+            <h2 class="section-title">今週の人気AI TOP10</h2>
+            <div class="ranking-list">
+                <article class="ranking-card">
+                    <div class="ranking-image">
+                        <img src="./assets/img/frame-26-2.png" alt="AIツール画像">
+                        <div class="ranking-number">No.1</div>
+                    </div>
+                    <div class="ranking-title">ChatGPT - OpenAI</div>
+                    <div class="ranking-tags">
+                        <span class="ranking-tag">AIチャット</span>
+                        <span class="ranking-tag">テキスト生成</span>
+                    </div>
+                    <div class="ranking-actions">
+                        <button class="ranking-button">詳細を見る</button>
+                        <button class="ranking-button">比較する</button>
+                    </div>
+                    <div class="ranking-stars">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                    </div>
+                </article>
+
+                <article class="ranking-card">
+                    <div class="ranking-image">
+                        <img src="./assets/img/frame-26.png" alt="AIツール画像">
+                        <div class="ranking-number">No.2</div>
+                    </div>
+                    <div class="ranking-title">Midjourney - 画像生成AI</div>
+                    <div class="ranking-tags">
+                        <span class="ranking-tag">画像生成</span>
+                        <span class="ranking-tag">アート</span>
+                    </div>
+                    <div class="ranking-actions">
+                        <button class="ranking-button">詳細を見る</button>
+                        <button class="ranking-button">比較する</button>
+                    </div>
+                    <div class="ranking-stars">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star-half.svg" alt="星半分" class="star-icon">
+                    </div>
+                </article>
+
+                <article class="ranking-card">
+                    <div class="ranking-image">
+                        <img src="./assets/img/frame-26-4.png" alt="AIツール画像">
+                        <div class="ranking-number">No.3</div>
+                    </div>
+                    <div class="ranking-title">DALL-E 3 - OpenAI</div>
+                    <div class="ranking-tags">
+                        <span class="ranking-tag">画像生成</span>
+                        <span class="ranking-tag">AIアート</span>
+                    </div>
+                    <div class="ranking-actions">
+                        <button class="ranking-button">詳細を見る</button>
+                        <button class="ranking-button">比較する</button>
+                    </div>
+                    <div class="ranking-stars">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                        <img src="./assets/img/star.svg" alt="星" class="star-icon">
+                    </div>
+                </article>
+            </div>
+            <a href="./ranking.html" class="view-all-btn">
+                <span>ランキングをもっと見る</span>
+                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+            </a>
+        </section>
+
+        <!-- 新着AIツールセクション -->
+        <section class="latest-AI-tools">
+            <div class="section-header">
+                <h2 class="section-title">新着AIツール</h2>
+                <p class="section-subtitle">最近追加された注目のAIサービス</p>
+            </div>
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <div class="tool-image">
+                        <img src="./img/preview-image.png" alt="AIツール画像">
+                        <div class="tool-new">NEW</div>
+                    </div>
+                    <div class="tool-title">Claude 3 - Anthropic</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">AIチャット</span>
+                        <span class="tool-tag">テキスト生成</span>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-image">
+                        <img src="./img/preview-image-2.png" alt="AIツール画像">
+                        <div class="tool-new">NEW</div>
+                    </div>
+                    <div class="tool-title">Stable Diffusion XL</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">画像生成</span>
+                        <span class="tool-tag">AIアート</span>
+                    </div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-image">
+                        <img src="./img/preview-image-4.png" alt="AIツール画像">
+                        <div class="tool-new">NEW</div>
+                    </div>
+                    <div class="tool-title">Gemini Pro - Google</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">AIチャット</span>
+                        <span class="tool-tag">マルチモーダル</span>
+                    </div>
+                </article>
+            </div>
+            <a href="./new.html" class="view-all-btn">
+                <span>新着ツールをもっと見る</span>
+                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+            </a>
+        </section>
+
+        <!-- レビューセクション -->
+        <section class="latest-reviews">
+            <h2 class="section-title">新着のレビュー</h2>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-avatar">
+                        <img src="./img/avatar-3.png" alt="ユーザーアバター">
+                    </div>
+                    <div class="review-name">田中 太郎</div>
+                    <div class="review-content">
+                        ChatGPTは本当に便利です。文章作成やアイデア出しに重宝しています。特に長文の作成が得意で、時間の節約になります。
+                    </div>
+                    <div class="review-date">2025年5月6日</div>
+                    <div class="review-stars">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-avatar">
+                        <img src="./img/avatar-2.png" alt="ユーザーアバター">
+                    </div>
+                    <div class="review-name">佐藤 花子</div>
+                    <div class="review-content">
+                        Midjourneyの画像生成能力は素晴らしいです。デザインのアイデア出しや、プレゼン資料の作成に活用しています。
+                    </div>
+                    <div class="review-date">2025年5月5日</div>
+                    <div class="review-stars">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star-half.svg" alt="星半分" class="star-icon">
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-avatar">
+                        <img src="./img/avatar-4.png" alt="ユーザーアバター">
+                    </div>
+                    <div class="review-name">鈴木 一郎</div>
+                    <div class="review-content">
+                        DALL-E 3の画像生成クオリティは最高です。特に細部の表現が優れていて、ビジネス用途でも十分使えます。
+                    </div>
+                    <div class="review-date">2025年5月4日</div>
+                    <div class="review-stars">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                        <img src="img/star.svg" alt="星" class="star-icon">
+                    </div>
+                </article>
+            </div>
+            <a href="./reviews.html" class="view-all-btn">
+                <span>すべてのレビューを見る</span>
+                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+            </a>
+        </section>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="./assets/img/logo_footer.png" alt="AIサービス比較.com" />
+                    <p class="footer-description">最新のAIツール情報をお届けします</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>カテゴリー</h3>
+                        <ul>
+                            <li><a href="./categories.html#love">恋愛相談</a></li>
+                            <li><a href="./categories.html#voice">音声変換</a></li>
+                            <li><a href="./categories.html#chat">AIチャット</a></li>
+                            <li><a href="./categories.html#image">画像生成</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>サイト情報</h3>
+                        <ul>
+                            <li><a href="./contact.html">お問い合わせ</a></li>
+                            <li><a href="./advertise.html">広告掲載</a></li>
+                            <li><a href="./submit.html">掲載依頼</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <h3>フォローする</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><img src="./img/instagram.svg" alt="Instagram"></a>
+                        <a href="#" class="social-link"><img src="./img/facebook.svg" alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="./img/twitter.svg" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 AIサービス比較.com All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
