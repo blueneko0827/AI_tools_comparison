@@ -459,3 +459,16 @@
         width: 100%;
     }
 } 
+/* @media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+}  */
