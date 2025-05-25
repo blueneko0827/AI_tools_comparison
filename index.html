@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="home-page">
         <!-- ナビゲーションバー -->
@@ -63,7 +65,8 @@
             <div class="category-grid-items">
                 <div class="category-grid">
                     <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" /></div>
+                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" />
+                        </div>
                         <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
                         <span class="category-label">画像生成AI</span>
                     </article>
@@ -95,7 +98,8 @@
                 </div>
                 <div class="category-grid">
                     <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/nature video.jpg" alt="画像生成AI" /></div>
+                        <div class="category-image"><img src="./assets/img/categoris/nature video.jpg" alt="画像生成AI" />
+                        </div>
                         <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
                         <span class="category-label">画像生成AI</span>
                     </article>
@@ -119,17 +123,27 @@
                 </div>
                 <div class="category-grid">
                     <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/code generation.jpg" alt="画像生成AI" /></div>
+                        <div class="category-image"><img src="./assets/img/categoris/code generation.jpg"
+                                alt="画像生成AI" /></div>
                         <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
                         <span class="category-label">画像生成AI</span>
                     </article>
                     <!-- 他のカテゴリーカードも同様の構造で -->
                 </div>
             </div>
-            <a href="./categories.html" class="view-all-btn">
+
+            <div class="category-cta-btn">
+                <div class="overlap-group">
+                    <div class="view-btn-section">
+                        <div class="text-wrapper">すべてのカテゴリを見る</div>
+                    </div>
+                    <img class="arrow-caret-right-SM" src="./assets/img/Vector.png" alt="矢印" class="arrow-icon" />
+                </div>
+            </div>
+            <!-- <a href="./categories.html" class="view-all-btn">
                 <span>すべてのカテゴリを見る</span>
-                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
-            </a>
+                <img src="./assets/img/Vector.png" alt="矢印" class="arrow-icon">
+            </a> -->
         </section>
 
         <!-- ランキングセクション -->
@@ -206,8 +220,12 @@
                 </article>
             </div>
             <a href="./ranking.html" class="view-all-btn">
-                <span>ランキングをもっと見る</span>
-                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+                <div class="overlap-group">
+                    <div class="view-btn-section">
+                        <div class="text-wrapper">ランキングをもっと見る</div>
+                    </div>
+                    <img src="./assets/img/Vector.png" alt="矢印" class="arrow-caret-right-SM" />
+                </div>
             </a>
         </section>
 
@@ -255,8 +273,12 @@
                 </article>
             </div>
             <a href="./new.html" class="view-all-btn">
-                <span>新着ツールをもっと見る</span>
-                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+                <div class="overlap-group">
+                    <div class="view-btn-section">
+                        <div class="text-wrapper">新着ツールをもっと見る</div>
+                    </div>
+                    <img src="./assets/img/Vector.png" alt="矢印" class="arrow-caret-right-SM" />
+                </div>
             </a>
         </section>
 
@@ -319,8 +341,12 @@
                 </article>
             </div>
             <a href="./reviews.html" class="view-all-btn">
-                <span>すべてのレビューを見る</span>
-                <img src="./img/caret-right-SM.svg" alt="矢印" class="arrow-icon">
+                <div class="overlap-group">
+                    <div class="view-btn-section">
+                        <div class="text-wrapper">すべてのレビューを見る</div>
+                    </div>
+                    <img src="./assets/img/Vector.png" alt="矢印" class="arrow-caret-right-SM" />
+                </div>
             </a>
         </section>
 
@@ -331,7 +357,7 @@
                     <img class="footer-logo" src="./assets/img/logo_footer.png" alt="AIサービス比較.com" />
                     <p class="footer-description">最新のAIツール情報をお届けします</p>
                 </div>
-                
+
                 <div class="footer-links">
                     <div class="footer-section">
                         <h3>カテゴリー</h3>
@@ -342,7 +368,7 @@
                             <li><a href="./categories.html#image">画像生成</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="footer-section">
                         <h3>サイト情報</h3>
                         <ul>
@@ -362,11 +388,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p class="copyright">© 2025 AIサービス比較.com All rights reserved.</p>
             </div>
         </footer>
     </div>
 </body>
+
 </html>

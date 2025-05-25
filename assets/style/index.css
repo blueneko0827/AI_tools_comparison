@@ -287,21 +287,69 @@ section {
   }
 }
 
-/* View All Button */
+/* View All Buttons */
 .view-all-btn {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 300px;
+  text-decoration: none;
+}
+
+.view-all-btn .overlap-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  color: var(--primary-color);
-  font-weight: 500;
-  margin: 2rem auto;
-  max-width: 200px;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #00AEED 0%, #157FCC 100%);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 174, 237, 0.2);
 }
 
-.arrow-icon {
+.view-all-btn .overlap-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 174, 237, 0.3);
+}
+
+.view-all-btn .text-wrapper {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.view-all-btn .arrow-caret-right-SM {
   width: 16px;
   height: 16px;
+  margin-top: 1px;
+  transition: transform 0.3s ease;
+}
+
+.view-all-btn .overlap-group:hover .arrow-caret-right-SM {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .view-all-btn {
+    margin: 2rem auto;
+  }
+  
+  .view-all-btn .overlap-group {
+    padding: 12px 24px;
+  }
+  
+  .view-all-btn .text-wrapper {
+    font-size: 14px;
+  }
+  
+  .view-all-btn .arrow-caret-right-SM {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 /* Footer */
@@ -766,4 +814,73 @@ section {
   position: absolute;
   top: 55px;
   left: 122px;
+}
+
+/* Category CTA Button */
+.category-cta-btn {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 300px;
+}
+
+.overlap-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(90deg, #00AEED 0%, #157FCC 100%);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 174, 237, 0.2);
+}
+
+.overlap-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 174, 237, 0.3);
+}
+
+.view-btn-section {
+  display: flex;
+  align-items: center;
+}
+
+.text-wrapper {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.arrow-caret-right-SM {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  transition: transform 0.3s ease;
+}
+
+.overlap-group:hover .arrow-caret-right-SM {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .category-cta-btn {
+    margin: 2rem auto;
+  }
+  
+  .overlap-group {
+    padding: 12px 24px;
+  }
+  
+  .text-wrapper {
+    font-size: 14px;
+  }
+  
+  .arrow-caret-right-SM {
+    width: 14px;
+    height: 14px;
+  }
 }
