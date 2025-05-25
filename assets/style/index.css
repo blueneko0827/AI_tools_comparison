@@ -213,6 +213,7 @@ section {
 /* Category Grid */
 .category-grid-items {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   max-width: 1200px;
@@ -220,9 +221,7 @@ section {
 }
 
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  width: 100%;
 }
 
 .category-card {
@@ -266,23 +265,21 @@ section {
 @media (max-width: 768px) {
   .category-grid-items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem 0;
+    scroll-snap-type: x mandatory;
   }
 
   .category-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0 1rem;
-    min-width: min-content;
+    min-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
   }
 
   .category-card {
-    min-width: 280px;
-    flex-shrink: 0;
+    width: 100%;
   }
 
   .category-image {
