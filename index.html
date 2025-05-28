@@ -827,7 +827,7 @@
                 <div class="div">Propose</div>
             </a>
             
-            <a href="/search" class="search">
+            <a href="javascript:void(0)" class="search" onclick="toggleSearch()">
                 <img class="interface-search" src="assets/img/search-magnifying-glass.svg" alt="Search" />
                 <div class="text-wrapper-2">Search</div>
             </a>
@@ -862,6 +862,32 @@
                 body.style.overflow = '';
             }
         });
+    });
+
+    function toggleSearch() {
+        const searchBox = document.querySelector('.search-box');
+        const searchLink = document.querySelector('.fixed-bottom-menu .search');
+        
+        searchBox.classList.toggle('active');
+        searchLink.classList.toggle('active');
+        
+        if (searchBox.classList.contains('active')) {
+            // Focus the search input when opened
+            searchBox.querySelector('.search-input').focus();
+        }
+    }
+
+    // Close search box when clicking outside
+    document.addEventListener('click', function(event) {
+        const searchBox = document.querySelector('.search-box');
+        const searchLink = document.querySelector('.fixed-bottom-menu .search');
+        
+        if (searchBox.classList.contains('active') && 
+            !searchBox.contains(event.target) && 
+            !searchLink.contains(event.target)) {
+            searchBox.classList.remove('active');
+            searchLink.classList.remove('active');
+        }
     });
     </script>
     <script src="assets/js/main.js"></script>
