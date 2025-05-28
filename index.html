@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="国内最大級のAIツール比較サイト。1,200件以上のAIツールを無料で比較できます。">
     <title>AIサービス比較.com - 国内最大級のAIツール比較サイト</title>
-    <link rel="stylesheet" href="./assets/style/global.css">
-    <link rel="stylesheet" href="./assets/style/index.css">
+    <link rel="stylesheet" href="assets/style/global.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -48,11 +50,13 @@
             <p class="hero-subtitle">完全無料・登録不要! 今すぐ使える最新AIツールが見つかる</p>
             <div class="search-box">
                 <form class="search-form" action="./search.html" method="GET">
-                    <input type="text" name="q" placeholder="AIツールを検索..." class="search-input">
-                    <button type="submit" class="search-button">
-                        <img src="./assets/img/Search_Magnifying_Glass.png" alt="検索" class="search-icon">
-                        <span>検索</span>
-                    </button>
+                    <div class="search-input-wrapper">
+                        <input type="text" name="q" placeholder="AIツールを検索..." class="search-input">
+                        <button type="submit" class="search-button">
+                            <img src="./assets/img/Search_Magnifying_Glass.png" alt="検索" class="search-icon">
+                            <span>検索</span>
+                        </button>
+                    </div>
                 </form>
             </div>
             <div class="category-tags">
@@ -65,89 +69,84 @@
 
         <!-- 人気カテゴリーセクション -->
         <section class="popular-category">
-            <h2 class="section-title">人気カテゴリー</h2>
+            <div class="section-header">
+                <h2 class="section-title">人気カテゴリー</h2>
+                <p class="section-subtitle">目的に合わせて最適なAIツールを見つけよう</p>
+            </div>
             <div class="category-grid-items">
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" />
-                        </div>
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/image gallery.jpg" alt="画像生成AI" />
                         <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/AI chat.jpg" alt="画像生成AI" /></div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/music.jpg" alt="画像生成AI" /></div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/Dating.jpg" alt="画像生成AI" /></div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/nature video.jpg" alt="画像生成AI" />
-                        </div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/doc3.jpg" alt="画像生成AI" /></div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/fortune2.jpg" alt="画像生成AI" /></div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
-                <div class="category-grid">
-                    <article class="category-card">
-                        <div class="category-image"><img src="./assets/img/categoris/code generation.jpg"
-                                alt="画像生成AI" /></div>
-                        <span class="category-label">画像生成AI</span>
-                        <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
-                    </article>
-                    <!-- 他のカテゴリーカードも同様の構造で -->
-                </div>
+                    </div>
+                    <h3 class="category-name">テキストから画像を自動生成するAIツール</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/AI chat.jpg" alt="AIチャット" />
+                        <span class="category-label">AIチャット</span>
+                    </div>
+                    <h3 class="category-name">自然な会話ができるAIチャットツール</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/music.jpg" alt="音楽生成AI" />
+                        <span class="category-label">音楽生成AI</span>
+                    </div>
+                    <h3 class="category-name">AIで作曲・音楽制作ができるツール</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/Dating.jpg" alt="恋愛相談AI" />
+                        <span class="category-label">恋愛相談AI</span>
+                    </div>
+                    <h3 class="category-name">恋愛の悩みを解決するAIカウンセラー</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/nature video.jpg" alt="動画生成AI" />
+                        <span class="category-label">動画生成AI</span>
+                    </div>
+                    <h3 class="category-name">テキストから動画を生成するAIツール</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/doc3.jpg" alt="文書作成AI" />
+                        <span class="category-label">文書作成AI</span>
+                    </div>
+                    <h3 class="category-name">文章作成・編集をサポートするAIツール</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/fortune2.jpg" alt="占いAI" />
+                        <span class="category-label">占いAI</span>
+                    </div>
+                    <h3 class="category-name">AIによる運勢占い・未来予測ツール</h3>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-image">
+                        <img src="./assets/img/categoris/code generation.jpg" alt="コード生成AI" />
+                        <span class="category-label">コード生成AI</span>
+                    </div>
+                    <h3 class="category-name">プログラミングをサポートするAIツール</h3>
+                </article>
             </div>
 
-            <div class="category-cta-btn">
+            <a href="./categories.html" class="category-cta-btn">
                 <div class="overlap-group">
                     <div class="view-btn-section">
                         <div class="text-wrapper">すべてのカテゴリを見る</div>
                     </div>
-                    <img class="arrow-caret-right-SM" src="./assets/img/Vector.png" alt="矢印" class="arrow-icon" />
+                    <img class="arrow-caret-right-SM" src="./assets/img/Vector.png" alt="矢印" />
                 </div>
-            </div>
-            <!-- <a href="./categories.html" class="view-all-btn">
-                <span>すべてのカテゴリを見る</span>
-                <img src="./assets/img/Vector.png" alt="矢印" class="arrow-icon">
-            </a> -->
+            </a>
         </section>
 
         <!-- ランキングセクション -->
@@ -810,6 +809,29 @@
                 <p class="copyright">© 2025 AIサービス比較.com All rights reserved.</p>
             </div>
         </footer>
+
+        <!-- Bottom Menu -->
+        <div class="fixed-bottom-menu">
+            <a href="/categories" class="category">
+                <img class="img" src="assets/img/folder-open.svg" alt="Categories" />
+                <div class="text-wrapper">AI Tools</div>
+            </a>
+            
+            <a href="/articles" class="article">
+                <img class="img" src="assets/img/user-card-ID.svg" alt="Articles" />
+                <div class="div">Article</div>
+            </a>
+            
+            <a href="/propose" class="add-tools">
+                <img class="edit-add-plus-circle" src="assets/img/add-plus-circle.svg" alt="Propose" />
+                <div class="div">Propose</div>
+            </a>
+            
+            <a href="/search" class="search">
+                <img class="interface-search" src="assets/img/search-magnifying-glass.svg" alt="Search" />
+                <div class="text-wrapper-2">Search</div>
+            </a>
+        </div>
     </div>
 
     <script>
@@ -842,6 +864,7 @@
         });
     });
     </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
