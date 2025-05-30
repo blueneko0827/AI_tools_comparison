@@ -44,6 +44,24 @@
         </header>
         <div class="menu-overlay"></div>
 
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-header">
+                <div class="user-section">
+                    <img class="user-icon" src="./assets/img/User_02.png" alt="ユーザーアイコン" />
+                    <a href="./login.html" class="login-link">ログイン/登録</a>
+                </div>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="./index.html" class="mobile-nav-link active">ホーム</a>
+                <a href="./categories.html" class="mobile-nav-link">カテゴリー</a>
+                <a href="./ranking.html" class="mobile-nav-link">ランキング</a>
+                <a href="./new.html" class="mobile-nav-link">新着</a>
+                <a href="./reviews.html" class="mobile-nav-link">レビュー</a>
+                <a href="./contact.html" class="mobile-nav-link">お問い合わせ</a>
+            </div>
+        </nav>
+
         <!-- ヒーローセクション -->
         <section class="top-hero">
             <h1 class="hero-title">国内No.1掲載数！1,200件超のAIツールを一括比較</h1>
@@ -837,29 +855,39 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const menuHamburger = document.querySelector('.menu-hamburger');
-        const navbar = document.querySelector('.navbar');
+        const mobileNav = document.querySelector('.mobile-nav');
         const menuOverlay = document.querySelector('.menu-overlay');
         const body = document.body;
 
-        menuHamburger.addEventListener('click', function() {
-            navbar.classList.toggle('active');
+        function closeMenu() {
+            mobileNav.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        menuHamburger.addEventListener('click', function(event) {
+            event.stopPropagation();
+            mobileNav.classList.toggle('active');
             menuOverlay.classList.toggle('active');
-            body.style.overflow = navbar.classList.contains('active') ? 'hidden' : '';
+            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
         });
 
         // Close menu when clicking overlay
-        menuOverlay.addEventListener('click', function() {
-            navbar.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            body.style.overflow = '';
-        });
+        menuOverlay.addEventListener('click', closeMenu);
 
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            if (!navbar.contains(event.target) && !menuHamburger.contains(event.target)) {
-                navbar.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                body.style.overflow = '';
+            if (mobileNav.classList.contains('active') && 
+                !mobileNav.contains(event.target) && 
+                !menuHamburger.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && mobileNav.classList.contains('active')) {
+                closeMenu();
             }
         });
     });
@@ -872,7 +900,6 @@
         searchLink.classList.toggle('active');
         
         if (searchBox.classList.contains('active')) {
-            // Focus the search input when opened
             searchBox.querySelector('.search-input').focus();
         }
     }
