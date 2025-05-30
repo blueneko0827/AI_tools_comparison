@@ -45,13 +45,11 @@
 .navbar {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 .nav-link {
   color: #333;
-  text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -1349,7 +1347,7 @@ section {
 
 /* Fixed Bottom Menu for Mobile */
 .fixed-bottom-menu {
-  display: none; /* Hidden by default, shown only on mobile */
+  display: none; /* Hidden by default, shown only on mobile and tablets */
   width: 100%;
   height: 60px;
   align-items: center;
@@ -1404,8 +1402,8 @@ section {
   margin-top: 4px;
 }
 
-/* Show bottom menu only on mobile devices */
-@media (max-width: 768px) {
+/* Show bottom menu on mobile devices and tablets */
+@media (max-width: 1024px) {
   .fixed-bottom-menu {
     display: flex;
   }
@@ -1415,7 +1413,7 @@ section {
     padding-bottom: 60px;
   }
   
-  /* Modify nav-bar for mobile */
+  /* Modify nav-bar for mobile and tablets */
   .nav-bar {
     position: fixed;
     top: 0;
@@ -1446,7 +1444,6 @@ section {
   }
 
   .user-section {
-    /* position: absolute; */
     right: 1rem;
     display: flex;
     align-items: center;
@@ -1479,66 +1476,7 @@ section {
   }
 }
 
-/* Adjust bottom menu for smaller screens */
-@media (max-width: 480px) {
-  .fixed-bottom-menu {
-    gap: 30px;
-    padding: 0px 20px;
-  }
-  
-  .fixed-bottom-menu .category,
-  .fixed-bottom-menu .article,
-  .fixed-bottom-menu .add-tools,
-  .fixed-bottom-menu .search {
-    width: 36px;
-    height: 36px;
-  }
-  
-  .fixed-bottom-menu .img,
-  .fixed-bottom-menu .edit-add-plus-circle,
-  .fixed-bottom-menu .interface-search {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .fixed-bottom-menu .text-wrapper,
-  .fixed-bottom-menu .div,
-  .fixed-bottom-menu .text-wrapper-2 {
-    font-size: 9px;
-  }
-
-  .nav-bar {
-    padding: 0.5rem 1rem;
-  }
-
-  .logo {
-    height: 32px;
-  }
-
-  .site-name {
-    font-size: 1rem;
-  }
-
-  .user-section {
-    gap: 6px;
-  }
-
-  .user-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .login-link {
-    font-size: 10px;
-  }
-
-  .menu-hamburger {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .search-box {
     position: fixed;
     bottom: 60px;
