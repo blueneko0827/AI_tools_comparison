@@ -292,6 +292,10 @@
     font-size: 0.75rem;
     padding: 0.3rem 0.2rem;
   }
+
+  .category-tags {
+    display: none !important;
+  }
 }
 
 /* Mobile (480px and below) */
@@ -309,6 +313,10 @@
   .nav-link {
     font-size: 0.7rem;
     padding: 0.25rem 0.15rem;
+  }
+
+  .category-tags {
+    display: none !important;
   }
 }
 
