@@ -408,7 +408,7 @@
   border-radius: 10px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
   padding: 25px 37px;
-  display: none;
+  display: block;
 }
 
 .search-box.active {
@@ -1483,6 +1483,7 @@ section {
 
 @media (max-width: 1024px) {
   .search-box {
+    display: none; /* Hide by default on mobile */
     position: fixed;
     bottom: 60px;
     left: 0;
