@@ -1742,11 +1742,11 @@ section {
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.3s ease;
+  opacity: 1;
 }
 
 .menu-overlay.active {
   display: block;
-  opacity: 1;
 }
 
 /* Mobile Navigation */
