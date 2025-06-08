@@ -162,7 +162,7 @@
 
   .menu-hamburger {
     display: block !important;
-    margin-left: 12px;
+    margin-left: 5px;
   }
 }
 
@@ -1742,72 +1742,62 @@ section {
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.3s ease;
-  opacity: 1;
 }
 
 .menu-overlay.active {
   display: block;
+  opacity: 1;
 }
 
 /* Mobile Navigation */
-/* .mobile-nav {
-  position: fixed;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  background-color: #ffffff;
-  z-index: 1001;
-  transition: top 0.5s ease !important;
-  display: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 0px 0px 5px 5px;
-} */
-
 .mobile-nav {
   display: none;
   position: fixed;
-  top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 65px;
+  /* Changed from -100% to match nav-bar height */
+  left: 0;
+  right: 0;
   width: 100%;
-  max-height: 0;
-  overflow: hidden;
   background-color: #fff;
   z-index: 1001;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  /* transition: transform 0.3s ease-in-out; */
+  opacity: 0;
 }
 
-/* .mobile-nav.active {
-  display: block;
-  top: 64px;
-} */
-
 .mobile-nav.active {
-  max-height: 100vh;
+  display: block;
+  transform: translateY(0);
   opacity: 1;
 }
 
 .mobile-nav-header {
-  padding: 0.75rem 1rem;
   border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.mobile-user-section {
+  display: flex;
+  padding: 1rem 1.25rem;
+  align-items: center;
+  gap: 8px;
 }
 
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  background-color: #fff;
 }
 
 .mobile-nav-link {
-  padding: 0.6rem 0.75rem;
+  padding: 0.75rem 1rem;
   color: #333;
   text-decoration: none;
   font-size: 0.9rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  text-align: center;
 }
 
 .mobile-nav-link:hover,
@@ -1833,4 +1823,24 @@ section {
 .mobile-submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 174, 237, 0.2);
+}
+
+@keyframes gentleFadeIn {
+  from {
+    opacity: 0;
+    height: 0px;
+  }
+
+  to {
+    opacity: 1;
+    height: 360px;
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  animation: gentleFadeIn 0.4s ease-out forwards;
+  overflow: hidden;
+  animation-delay: calc(var(--order) * 0.15s);
+
 }

@@ -8,10 +8,11 @@
     <title>AIサービス比較.com - 国内最大級のAIツール比較サイト</title>
     <link rel="stylesheet" href="assets/style/global.css">
     <link rel="stylesheet" href="assets/style/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./assets/js/main.js"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -44,14 +45,14 @@
         <div class="menu-overlay"></div>
 
         <!-- Mobile Menu -->
-        <nav class="mobile-nav">
+        <nav class="mobile-nav fade-in-section">
             <div class="mobile-nav-header">
-                <div class="user-section">
+                <div class="mobile-user-section">
                     <img class="user-icon" src="./assets/img/User_02.png" alt="ユーザーアイコン" />
                     <a href="./login.html" class="login-link">ログイン/登録</a>
                 </div>
             </div>
-            <div class="mobile-nav-links">
+            <div class="mobile-nav-links ">
                 <a href="./index.html" class="mobile-nav-link active">ホーム</a>
                 <a href="./categories.html" class="mobile-nav-link">カテゴリー</a>
                 <a href="./ranking.html" class="mobile-nav-link">ランキング</a>
@@ -844,86 +845,13 @@
                 <div class="div">提出</div>
             </a>
 
-            <a href="javascript:void(0)" class="search" onclick="toggleSearch()">
+            <a href="javascript:void(0)" onclick="toggleSearch()" class="search">
                 <img class="interface-search" src="assets/img/search-magnifying-glass.svg" alt="Search" />
                 <div class="text-wrapper-2">検索</div>
             </a>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuHamburger = document.querySelector('.menu-hamburger');
-            const mobileNav = document.querySelector('.mobile-nav');
-            const menuOverlay = document.querySelector('.menu-overlay');
-            const body = document.body;
-
-            function closeMenu() {
-                mobileNav.classList.remove('active');
-                menuOverlay.classList.remove('active');
-                body.style.overflow = '';
-            }
-
-            function openMenu() {
-                mobileNav.classList.add('active');
-                menuOverlay.classList.add('active');
-                body.style.overflow = 'hidden';
-            }
-
-            menuHamburger.addEventListener('click', function (event) {
-                event.stopPropagation();
-                if (mobileNav.classList.contains('active')) {
-                    closeMenu();
-                } else {
-                    openMenu();
-                }
-            });
-
-            // Close menu when clicking overlay
-            menuOverlay.addEventListener('click', closeMenu);
-
-            // Close menu when clicking outside
-            document.addEventListener('click', function (event) {
-                if (mobileNav.classList.contains('active') &&
-                    !mobileNav.contains(event.target) &&
-                    !menuHamburger.contains(event.target)) {
-                    closeMenu();
-                }
-            });
-
-            // Close menu when pressing Escape key
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape' && mobileNav.classList.contains('active')) {
-                    closeMenu();
-                }
-            });
-        });
-
-        function toggleSearch() {
-            const searchBox = document.querySelector('.search-box');
-            const searchLink = document.querySelector('.fixed-bottom-menu .search');
-
-            searchBox.classList.toggle('active');
-            searchLink.classList.toggle('active');
-
-            if (searchBox.classList.contains('active')) {
-                searchBox.querySelector('.search-input').focus();
-            }
-        }
-
-        // Close search box when clicking outside
-        document.addEventListener('click', function (event) {
-            const searchBox = document.querySelector('.search-box');
-            const searchLink = document.querySelector('.fixed-bottom-menu .search');
-
-            if (searchBox.classList.contains('active') &&
-                !searchBox.contains(event.target) &&
-                !searchLink.contains(event.target)) {
-                searchBox.classList.remove('active');
-                searchLink.classList.remove('active');
-            }
-        });
-    </script>
 </body>
 
 </html>

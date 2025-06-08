@@ -1,37 +1,61 @@
-// Check if we're on mobile
-function isMobile() {
-    return window.innerWidth <= 768;
-}
+// Toggle search function
+function toggleSearch() {
+    const searchBox = document.querySelector('.search-box');
+    const searchLink = document.querySelector('.fixed-bottom-menu .search');
 
-// Handle mobile menu visibility
-function handleMobileMenu() {
-    const bottomMenu = document.querySelector('.fixed-bottom-menu');
-    if (bottomMenu) {
-        if (isMobile()) {
-            bottomMenu.style.display = 'flex';
-        } else {
-            bottomMenu.style.display = 'none';
-        }
+    searchBox.classList.toggle('active');
+    searchLink.classList.toggle('active');
+
+    if (searchBox.classList.contains('active')) {
+        searchBox.querySelector('.search-input').focus();
     }
 }
 
-// Initial check
-handleMobileMenu();
+document.addEventListener('DOMContentLoaded', function () {
+    const menuHamburger = document.querySelector('.menu-hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const menuOverlay = document.querySelector('.menu-overlay');
 
-// Listen for window resize
-window.addEventListener('resize', handleMobileMenu);
+    // Toggle menu function
+    function toggleMenu() {
+        mobileNav.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
 
-// Add active class to current menu item
-function setActiveMenuItem() {
-    const currentPath = window.location.pathname;
-    const menuItems = document.querySelectorAll('.fixed-bottom-menu a');
-    
-    menuItems.forEach(item => {
-        if (item.getAttribute('href') === currentPath) {
-            item.classList.add('active');
+    // Toggle menu on hamburger click
+    menuHamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking overlay
+    menuOverlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // Close menu when pressing Escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && mobileNav.classList.contains('active')) {
+            toggleMenu();
         }
     });
-}
 
-// Set active menu item on page load
-document.addEventListener('DOMContentLoaded', setActiveMenuItem); 
+    // Close search box when clicking outside
+    document.addEventListener('click', function (event) {
+        const searchBox = document.querySelector('.search-box');
+        const searchLink = document.querySelector('.fixed-bottom-menu .search');
+
+        if (searchBox.classList.contains('active') &&
+            !searchBox.contains(event.target) &&
+            !searchLink.contains(event.target)) {
+            searchBox.classList.remove('active');
+            searchLink.classList.remove('active');
+        }
+    })
+});
