@@ -777,32 +777,6 @@ section {
   padding: 0 1rem;
 }
 
-.ranking-card {
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.ranking-card:hover {
-  transform: translateY(-4px);
-}
-
-.ranking-image {
-  height: 140px;
-  background-color: var(--secondary-background);
-  position: relative;
-}
-
-.ranking-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .ranking-number {
   position: absolute;
   top: 12px;
@@ -813,60 +787,6 @@ section {
   border-radius: 4px;
   font-size: 0.875rem;
   font-weight: 500;
-}
-
-.ranking-title {
-  padding: 12px 16px 8px;
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #333333;
-}
-
-.ranking-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0 16px 12px;
-}
-
-.ranking-tag {
-  background-color: #f5f5f5;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  color: #666666;
-}
-
-.ranking-actions {
-  display: flex;
-  gap: 8px;
-  padding: 0 16px 12px;
-}
-
-.ranking-button {
-  flex: 1;
-  height: 36px;
-  background-color: #00aeed;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.ranking-button:hover {
-  background-color: #0096cc;
-  transform: translateY(-2px);
-}
-
-.ranking-stars {
-  padding: 0 16px 12px;
-  margin-top: auto;
 }
 
 /* Latest AI Tools Section */
@@ -1234,7 +1154,6 @@ section {
   }
 
   .category-card,
-  .ranking-card,
   .tool-card,
   .review-card {
     max-width: 100%;
@@ -1429,47 +1348,31 @@ section {
   }
 
   .category-card,
-  .ranking-card,
   .tool-card,
   .review-card {
     max-width: 100%;
   }
 
   .category-image,
-  .ranking-image,
   .tool-image {
     height: 140px;
   }
 
   .category-name,
-  .ranking-title,
   .tool-title {
     font-size: 0.9rem;
     padding: 10px;
     line-height: 1.3;
   }
 
-  .ranking-tags,
-  .tool-tags {
+   .tool-tags {
     padding: 0 10px 8px;
     gap: 6px;
   }
 
-  .ranking-tag,
   .tool-tag {
     font-size: 0.7rem;
     padding: 2px 8px;
-  }
-
-  .ranking-actions {
-    padding: 0 10px 10px;
-    gap: 6px;
-  }
-
-  .ranking-button {
-    height: 28px;
-    font-size: 0.7rem;
-    padding: 0 8px;
   }
 
   .review-card {
