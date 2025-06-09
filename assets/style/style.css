@@ -67,7 +67,6 @@
 
 .categories-section {
     background-color: #ffffff;
-    border-radius: 8px;
     padding: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -85,6 +84,11 @@
     font-size: 0.875rem;
     color: #333333;
     background-color: #ffffff;
+}
+
+.popular-category {
+  background-color: #edf6ff;
+  padding: 4rem 2rem;
 }
 
 /* Category Grid */
