@@ -59,7 +59,20 @@
 }
 
 /* Main Content */
-.main-content {
+
+.category-grid-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.category-grid {
+  width: 100%;
+}
+/* .main-content {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -89,7 +102,7 @@
 .popular-category {
   background-color: #edf6ff;
   padding: 4rem 2rem;
-}
+} */
 
 /* Category Grid */
 .category-grid {
